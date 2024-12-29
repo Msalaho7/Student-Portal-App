@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 abstract class AppTheme {
-  static const TextStyle cardTextStyle = TextStyle(
-      color: AppColors.primary, fontWeight: FontWeight.normal, fontSize: 20);
 
   static final ThemeData appTheme = ThemeData(
     primaryColor: AppColors.primary,
