@@ -5,6 +5,8 @@ import '../tabs/results_tab.dart';
 import '../tabs/time_table.dart';
 import '../utils/app_colors.dart';
 
+//changeLocale and UI
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.changeLocale});
   static const routeName = "Home";

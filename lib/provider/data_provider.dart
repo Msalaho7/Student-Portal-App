@@ -4,6 +4,8 @@ import '../ui/models/lecture.dart';
 import '../ui/models/result.dart';
 import '../ui/models/student.dart';
 
+//State Management , Data Access, Data Loading and Reactive UI
+
 class DataProvider extends ChangeNotifier {
   Student? _student;
   List<Lecture> _lectures = [];

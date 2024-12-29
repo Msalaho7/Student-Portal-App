@@ -13,6 +13,7 @@ class Result {
     required this.courseSemester,
   });
 
+
   Map<String, dynamic> toJson() {
     return {
       'courseName': courseName,

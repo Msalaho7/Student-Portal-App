@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:student_portal_app2/ui/utils/app_colors.dart';
 
-class DataCardWidget extends StatelessWidget {
+class CardContainer extends StatelessWidget {
   final List<Widget> children;
 
-  const DataCardWidget({super.key, required this.children});
+  const CardContainer({super.key, required this.children});
 
   @override
   Widget build(BuildContext context) {

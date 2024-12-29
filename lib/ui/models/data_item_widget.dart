@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//label and value Parameters and ui
+
 class DataItemWidget extends StatelessWidget {
   final String label;
   final String value;
@@ -24,4 +26,3 @@ class DataItemWidget extends StatelessWidget {
     );
   }
 }
-

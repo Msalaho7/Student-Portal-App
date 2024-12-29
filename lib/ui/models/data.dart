@@ -4,7 +4,8 @@ import '../models/student.dart';
 import '../models/lecture.dart';
 import '../models/result.dart';
 
-// الدوال الخاصة بالمعلومات الشخصية
+//Data Serialization , Saving and loading Student , Lectures and Results Data.
+
 Future<void> saveStudentInfo(Student student) async {
   final prefs = await SharedPreferences.getInstance();
   final jsonString = jsonEncode(student.toJson());
@@ -21,7 +22,6 @@ Future<Student?> loadStudentInfo() async {
   return null;
 }
 
-// الدوال الخاصة بالجدول الزمني
 Future<void> saveLectures(List<Lecture> lectures) async {
   final prefs = await SharedPreferences.getInstance();
   final jsonList = lectures.map((lecture) => lecture.toJson()).toList();
@@ -39,7 +39,6 @@ Future<List<Lecture>> loadLectures() async {
   return [];
 }
 
-// الدوال الخاصة بالنتائج
 Future<void> saveResults(List<Result> results) async {
   final prefs = await SharedPreferences.getInstance();
   final jsonList = results.map((result) => result.toJson()).toList();

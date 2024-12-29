@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_portal_app2/ui/utils/app_localization_utils.dart';
 import '../../provider/data_provider.dart';
-import '../models/data_card_widget.dart';
+import '../models/cardContainer.dart';
 import '../models/data_item_widget.dart';
 import '../models/student.dart';
+
+/// Data Loading and Ui
 
 class PersonalInfo extends StatefulWidget {
   const PersonalInfo({super.key});
@@ -39,7 +41,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
             : Center(
           child: Column(
             children: [
-              DataCardWidget(
+              CardContainer(
                 children: [
                   DataItemWidget(
                     label: context.l10n.name,

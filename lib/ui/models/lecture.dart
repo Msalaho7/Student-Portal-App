@@ -1,3 +1,7 @@
+/// Lecture: The constructor to create a new Lecture object.
+/// toJson(): Converts the Lecture object to a JSON Map.
+/// fromJson(): Creates a Lecture object from a JSON Map.
+
 class Lecture {
   String lectureTime;
   String lectureDay;

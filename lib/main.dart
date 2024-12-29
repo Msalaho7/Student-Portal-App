@@ -19,15 +19,33 @@ void main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String? languageCode = prefs.getString('languageCode');
 
+  await _initializeData();
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => DataProvider(),
+      child: MyApp(
+        initialLocale:  languageCode != null ? Locale(languageCode) : null ,
+      ),
+    ),
+  );
+}
+
+Future<void> _initializeData() async {
+
+  const studentName = 'Mohamed';
+  const fatherName = 'Salah';
+  const studentLevel = 'Second Year';
+  const studentLatestGrade = '95%';
   final student = Student(
-    studentName: 'Mohamed',
-    fatherName: 'Salah',
-    studentLevel: 'Second Year',
-    studentLatestGrade: '95%',
+    studentName: studentName,
+    fatherName: fatherName,
+    studentLevel: studentLevel,
+    studentLatestGrade: studentLatestGrade,
   );
   await saveStudentInfo(student);
 
-  final List<Lecture> lectures = [
+  final List<Lecture> initialLectures = [
     Lecture(
       lectureTime: '10:00 AM - 12:00 PM',
       lectureDay: 'Sunday',
@@ -59,9 +77,9 @@ void main() async {
       instructor: 'Dr. Ahmed',
     ),
   ];
-  await saveLectures(lectures);
+  await saveLectures(initialLectures);
 
-  final List<Result> results = [
+  final List<Result> initialResults = [
     Result(
       courseName: 'Math',
       courseGrade: 'A',
@@ -91,15 +109,7 @@ void main() async {
       courseSemester: 'Spring',
     ),
   ];
-  await saveResults(results);
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => DataProvider(),
-      child: MyApp(
-        initialLocale:  languageCode != null ? Locale(languageCode) : null ,
-      ),
-    ),
-  );
+  await saveResults(initialResults);
 }
 
 class MyApp extends StatefulWidget {
