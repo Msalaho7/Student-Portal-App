@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_portal_app2/ui/utils/app_localization_utils.dart';
 import '../../provider/data_provider.dart';
-import '../models/cardContainer.dart';
+import '../models/card_container.dart';
 import '../models/data_item_widget.dart';
 import '../models/lecture.dart';
 

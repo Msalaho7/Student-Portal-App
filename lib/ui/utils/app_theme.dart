@@ -13,7 +13,7 @@ abstract class AppTheme {
     appBarTheme: const AppBarTheme(
       iconTheme: IconThemeData(color: AppColors.gray,size: 20),
       elevation: 0,
-      backgroundColor:  AppColors.primary,
+      backgroundColor: AppColors.primary,
       titleTextStyle: TextStyle(
         color: AppColors.gray,
         fontSize: 22,

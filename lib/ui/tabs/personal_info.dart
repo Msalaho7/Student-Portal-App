@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_portal_app2/ui/utils/app_localization_utils.dart';
 import '../../provider/data_provider.dart';
-import '../models/cardContainer.dart';
+import '../models/card_container.dart';
 import '../models/data_item_widget.dart';
 import '../models/student.dart';
 
@@ -39,31 +39,31 @@ class _PersonalInfoState extends State<PersonalInfo> {
         child: student == null
             ? Center(child: Text(context.l10n.noDataAvailable))
             : Center(
-          child: Column(
-            children: [
-              CardContainer(
-                children: [
-                  DataItemWidget(
-                    label: context.l10n.name,
-                    value: student.studentName,
-                  ),
-                  DataItemWidget(
-                    label: context.l10n.fatherName,
-                    value: student.fatherName,
-                  ),
-                  DataItemWidget(
-                    label: context.l10n.studentLevel,
-                    value: student.studentLevel,
-                  ),
-                  DataItemWidget(
-                    label: context.l10n.studentLatestGrade,
-                    value: student.studentLatestGrade,
-                  ),
-                ],
+                child: Column(
+                  children: [
+                    CardContainer(
+                      children: [
+                        DataItemWidget(
+                          label: context.l10n.name,
+                          value: student.studentName,
+                        ),
+                        DataItemWidget(
+                          label: context.l10n.fatherName,
+                          value: student.fatherName,
+                        ),
+                        DataItemWidget(
+                          label: context.l10n.studentLevel,
+                          value: student.studentLevel,
+                        ),
+                        DataItemWidget(
+                          label: context.l10n.studentLatestGrade,
+                          value: student.studentLatestGrade,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
-        ),
       ),
     );
   }
